@@ -8,7 +8,7 @@ This software is licensed under MIT license, please see the file COPYING in this
 An android app to seek for a travel guide
 
 ### To Build
-TravelMate requires that Android Studio be installed on your window device.
+TravelMate requires that Android Studio be installed on your device.
 
 ### To Run
 
