@@ -20,3 +20,7 @@ TravelMate requires that Android Studio be installed on your device.
 week 3 - TravelMate will be created on Android and is to find a personal guide who is not professional. My friend, Sejoong Kim, got this idea from Uber and AirBnB where "anyone" can be a driver/homeowner and a user at the same time. TravelMate provides a place for people to find a guide and to find their guests for a satisfying travel/trip. I designed up to implement TravleMate like a open-market shopping cart. So, I am working on implementing it based on shopping cart open-source and will add features for unique features.
 
 ### Future Plans
+
+### Contact Me
+Eunji Lee (prefer: Zoey) slaej1228@gmail.com
+Sejoong Kim sejoong0711@gmail.com
