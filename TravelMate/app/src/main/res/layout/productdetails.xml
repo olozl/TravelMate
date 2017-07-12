@@ -1,48 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="fill_parent" android:layout_width="fill_parent"
-    android:background="#ffffff" android:orientation="vertical">
-    <LinearLayout android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:id="@+id/LinearLayoutHeader"
-        android:orientation="horizontal">
-        <ImageView android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/ImageViewProduct"
-            android:adjustViewBounds="true" android:scaleType="fitXY"
-            android:src="@drawable/ic_action_name" android:layout_margin="5dip"></ImageView>
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/TextViewProductTitle"
-            android:layout_gravity="center" android:layout_margin="5dip"
-            android:textSize="26dip" android:text="Dead or Alive"
-            android:textColor="#000000"></TextView>
+<linearlayout android:background="#ffffff" android:layout_height="fill_parent" android:layout_width="fill_parent" android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+    <linearlayout android:id="@+id/LinearLayoutHeader" android:layout_height="wrap_content" android:layout_width="wrap_content" android:orientation="horizontal">
+        <imageview android:adjustViewBounds="true" android:id="@+id/ImageViewProduct" android:layout_height="wrap_content" android:layout_margin="5dip" android:layout_width="wrap_content" android:scaleType="fitXY" android:src="@drawable/ic_action_name"></imageview>
+        <textview android:id="@+id/TextViewProductTitle" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_margin="5dip" android:layout_width="wrap_content" android:text="Dead or Alive" android:textColor="#000000" android:textSize="26dip"></textview>
 
-    </LinearLayout>
+    </linearlayout>
+
+    <textview android:id="@+id/TextViewProductPrice" android:layout_height="wrap_content" android:layout_margin="5dip" android:layout_width="fill_parent" android:text="Product Price" android:textColor="#000000" android:textStyle="bold"></textview>
+
+    <textview android:id="@+id/TextViewProductDetails" android:layout_height="wrap_content" android:layout_margin="5dip" android:layout_weight="1" android:layout_width="fill_parent" android:text="Product description" android:textColor="#000000"></textview>
+
+    <linearlayout android:id="@+id/linearLayoutCurrentlyInCart" android:layout_height="wrap_content" android:layout_width="fill_parent">
+        <textview android:id="@+id/textViewCurrentlyInCart" android:layout_height="wrap_content" android:layout_margin="5dip" android:layout_width="wrap_content" android:text="Currently in Cart:" android:textColor="#000000" android:textSize="20dip"></textview>
+    </linearlayout>
 
 
-    <TextView android:layout_height="wrap_content" android:id="@+id/TextViewProductDetails"
-        android:layout_width="fill_parent" android:layout_margin="5dip"
-        android:layout_weight="1" android:textColor="#000000" android:text="Product description"></TextView>
-
-    <LinearLayout android:layout_height="wrap_content"
-        android:layout_width="fill_parent" android:id="@+id/linearLayoutCurrentlyInCart">
-        <TextView android:id="@+id/textViewCurrentlyInCart"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:textSize="20dip" android:textColor="#000000" android:text="Currently in Cart:"
-            android:layout_margin="5dip"></TextView>
-    </LinearLayout>
-
-
-    <LinearLayout android:layout_height="wrap_content"
-        android:layout_width="fill_parent" android:id="@+id/linearLayoutAddLayout"
-        android:orientation="horizontal" android:layout_margin="5dip">
-        <TextView android:id="@+id/textView1" android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:text="Quantity:"
-            android:textColor="#000000"></TextView>
-        <EditText android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_weight="1"
-            android:text="1" android:gravity="right" android:id="@+id/editTextQuantity"
-            android:inputType="number"></EditText>
-        <Button android:id="@+id/ButtonAddToCart"
-            android:layout_gravity="right" android:layout_height="wrap_content"
-            android:layout_width="wrap_content" android:text="Set Quantity"></Button>
-    </LinearLayout>
-</LinearLayout>
+    <linearlayout android:id="@+id/linearLayoutAddLayout" android:layout_height="wrap_content" android:layout_margin="5dip" android:layout_width="fill_parent" android:orientation="horizontal">
+        <textview android:id="@+id/textView1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Quantity:" android:textColor="#000000"></textview>
+        <edittext android:gravity="right" android:id="@+id/editTextQuantity" android:inputType="number" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="wrap_content" android:text="1"></edittext>
+        <button android:id="@+id/ButtonAddToCart" android:layout_gravity="right" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Set Quantity"></button>
+    </linearlayout>
+</linearlayout>
