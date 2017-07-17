@@ -21,15 +21,12 @@ public class ShoppingCartHelper {
     public static List<Product> getCatalog(Resources res){
         if(catalog == null) {
             catalog = new Vector<Product>();
-            catalog.add(new Product("Dead or Alive", res
-                    .getDrawable(R.drawable.ic_action_name),
-                    "Dead or Alive by Tom Clancy with Grant Blackwood", 29.99));
-            catalog.add(new Product("Switch", res
-                    .getDrawable(R.drawable.ic_action_name),
-                    "Switch by Chip Heath and Dan Heath", 24.99));
-            catalog.add(new Product("Watchmen", res
-                    .getDrawable(R.drawable.ic_action_name),
-                    "Watchmen by Alan Moore and Dave Gibbons", 14.99));
+            catalog.add(new Product("Portland", res.getDrawable(R.drawable.ic_action_name),
+                    "PSU tour (1hr) + Downtown Tour (3hrs) ", 30.00));
+            catalog.add(new Product("New York", res.getDrawable(R.drawable.ic_action_name),
+                    "PSU tour (1hr) + Downtown Tour (3hrs) ", 30.00));
+            catalog.add(new Product("LasVegas", res.getDrawable(R.drawable.ic_action_name),
+                    "PSU tour (1hr) + Downtown Tour (3hrs) ", 30.00));
         }
 
         return catalog;
