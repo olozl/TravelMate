@@ -17,12 +17,18 @@
         android:choiceMode="multipleChoice">
 
     </ListView>
-    <LinearLayout android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:orientation="horizontal"
-        android:layout_margin="5dip"
-        android:id="@+id/LinearLayoutCheckout" android:layout_gravity="right">
-        <Button android:id="@+id/Button02" android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:text="Proceed to Checkout"></Button>
+
+    <LinearLayout android:id="@+id/LinearLayoutCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_margin="5dip"
+            android:layout_gravity="left" android:id="@+id/ListCatalog"
+            android:text="Add more items"></Button>
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_margin="5dip"
+            android:layout_gravity="right" android:id="@+id/checkout"
+            android:text="Proceed to Checkout"></Button>
     </LinearLayout>
 
 

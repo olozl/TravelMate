@@ -23,7 +23,7 @@ public class ShoppingCartSubItems {
         if(catalogdetails == null) {
             catalogdetails = new Vector<Product>();
             catalogdetails.add(new Product("PSU Tour", res.getDrawable(R.drawable.ic_action_name),
-                    "2hrs", 30.00));
+                    "2hrs", 10.00));
             catalogdetails.add(new Product("Bike Tour", res.getDrawable(R.drawable.ic_action_name),
                     "PSU tour (1hr) + Downtown Tour (3hrs) ", 30.00));
             catalogdetails.add(new Product("Mt. Hood Tour", res.getDrawable(R.drawable.ic_action_name),
@@ -78,19 +78,4 @@ public class ShoppingCartSubItems {
         return cartList;
     }
 
-//    public void onCheckboxClicked(View view){
-//        boolean cliked = ((CheckBox) view).isChecked();
-//
-//        switch (view.getId()) {
-//            case R.id.checkbox_item:
-//                if(cliked){
-//
-//                }
-//                else {
-//
-//                }
-//                break;
-//
-//        }
-//    }
 }

@@ -20,7 +20,7 @@
         android:layout_margin="5dip" android:layout_height="wrap_content"
         android:layout_gravity="right">
         <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:text="Quantity:"
+            android:layout_height="wrap_content" android:text="Number of people:"
             android:textSize="18dip" android:textColor="#000000" android:id="@+id/textViewQuantity"></TextView>
     </LinearLayout>
 

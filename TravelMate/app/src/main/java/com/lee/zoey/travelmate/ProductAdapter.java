@@ -68,7 +68,7 @@ public class ProductAdapter extends BaseAdapter {
 
         // Show the quantity in the cart or not
         if (mShowQuantity) {
-            item.productQuantity.setText("Quantity: "
+            item.productQuantity.setText("Number of people: "
                     + ShoppingCartSubItems.getProductQuantity(curProduct));
         } else {
             // Hid the view

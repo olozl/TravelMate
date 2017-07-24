@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -47,6 +48,16 @@ public class ShoppingCartActivity extends Activity {
                 Intent productDetailsIntent = new Intent(getBaseContext(),ProductDetailsActivity.class);
                 productDetailsIntent.putExtra(ShoppingCartSubItems.PRODUCT_INDEX, position);
                 startActivity(productDetailsIntent);
+            }
+        });
+
+        Button viewCityCart = (Button) findViewById(R.id.ListCatalog);
+        viewCityCart.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent viewShoppingCartIntent = new Intent(getBaseContext(), CityActivity.class);
+                startActivity(viewShoppingCartIntent);
             }
         });
 
