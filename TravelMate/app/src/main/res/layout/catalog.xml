@@ -7,7 +7,7 @@
         android:layout_height="wrap_content" android:textColor="#000000"
         android:textSize="24dip" android:layout_margin="5dip" android:text="Product Catalog"></TextView>
     <ListView android:layout_height="wrap_content"
-        android:layout_weight="1" android:id="@+id/ListViewCatalog"
+        android:layout_weight="1" android:id="@+id/ListCatalog"
         android:layout_width="fill_parent" android:background="#ffffff"
         android:clickable="true" android:cacheColorHint="#ffffff">
     </ListView>

@@ -6,7 +6,7 @@
     <uses-sdk android:minSdkVersion="4" />
 
     <application android:icon="@mipmap/ic_launcher" android:label="@string/app_name">
-        <activity android:name="CatalogActivity"
+        <activity android:name="CityActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -14,7 +14,7 @@
             </intent-filter>
         </activity>
 
-
+        <activity android:name=".CatalogActivity"></activity>
         <activity android:name="ProductDetailsActivity"></activity>
         <activity android:name="ShoppingCartActivity"></activity>
 

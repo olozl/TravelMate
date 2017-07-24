@@ -24,10 +24,10 @@ public class ProductDetailsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.productdetails);
 
-        List<Product> catalog = ShoppingCartHelper.getCatalog(getResources());
+        List<Product> catalog = ShoppingCartSubItems.getCatalog(getResources());
 
         int productIndex = getIntent().getExtras().getInt(
-                ShoppingCartHelper.PRODUCT_INDEX);
+                ShoppingCartSubItems.PRODUCT_INDEX);
         final Product selectedProduct = catalog.get(productIndex);
 
         // Set the proper image and text
@@ -44,7 +44,7 @@ public class ProductDetailsActivity extends Activity {
         // Update the current quantity in the cart
         TextView textViewCurrentQuantity = (TextView) findViewById(R.id.textViewCurrentlyInCart);
         textViewCurrentQuantity.setText("Currently in Cart: "
-                + ShoppingCartHelper.getProductQuantity(selectedProduct));
+                + ShoppingCartSubItems.getProductQuantity(selectedProduct));
 
         // Save a reference to the quantity edit text
         final EditText editTextQuantity = (EditText) findViewById(R.id.editTextQuantity);
@@ -77,7 +77,7 @@ public class ProductDetailsActivity extends Activity {
                 }
 
                 // If we make it here, a valid quantity was entered
-                ShoppingCartHelper.setQuantity(selectedProduct, quantity);
+                ShoppingCartSubItems.setQuantity(selectedProduct, quantity);
 
                 // Close the activity
                 finish();
