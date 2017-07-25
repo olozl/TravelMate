@@ -27,7 +27,7 @@ public class ShoppingCartActivity extends Activity {
         setContentView(R.layout.shoppingcart);
 
 
-        mCartList = ShoppingCartSubItems.getCartList();
+        mCartList = ShoppingCartHelper.getCartList();
 
         // Make sure to clear the selections
         for(int i=0; i<mCartList.size(); i++) {
@@ -46,7 +46,7 @@ public class ShoppingCartActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
                 Intent productDetailsIntent = new Intent(getBaseContext(),ProductDetailsActivity.class);
-                productDetailsIntent.putExtra(ShoppingCartSubItems.PRODUCT_INDEX, position);
+                productDetailsIntent.putExtra(ShoppingCartSubItems.PRODUCT_INDEX, position);  //////////////////////////need to be changed. not position maybe!!
                 startActivity(productDetailsIntent);
             }
         });
@@ -74,7 +74,7 @@ public class ShoppingCartActivity extends Activity {
 
         double subTotal = 0;
         for(Product p : mCartList) {
-            int quantity = ShoppingCartSubItems.getProductQuantity(p);
+            int quantity = ShoppingCartHelper.getProductQuantity(p);
             subTotal += p.price * quantity;
         }
 

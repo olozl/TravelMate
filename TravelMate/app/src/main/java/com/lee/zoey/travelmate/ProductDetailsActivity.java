@@ -43,8 +43,8 @@ public class ProductDetailsActivity extends Activity {
 
         // Update the current quantity in the cart
         TextView textViewCurrentQuantity = (TextView) findViewById(R.id.textViewCurrentlyInCart);
-        textViewCurrentQuantity.setText("Currently in Cart: "
-                + ShoppingCartSubItems.getProductQuantity(selectedProduct));
+        textViewCurrentQuantity.setText("Currently reserved for "
+                + ShoppingCartHelper.getProductQuantity(selectedProduct) + " people in Cart");
 
         // Save a reference to the quantity edit text
         final EditText editTextQuantity = (EditText) findViewById(R.id.editTextQuantity);
@@ -77,7 +77,7 @@ public class ProductDetailsActivity extends Activity {
                 }
 
                 // If we make it here, a valid quantity was entered
-                ShoppingCartSubItems.setQuantity(selectedProduct, quantity);
+                ShoppingCartHelper.setQuantity(selectedProduct, quantity);
 
                 // Close the activity
                 finish();
