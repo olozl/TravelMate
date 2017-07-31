@@ -7,10 +7,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -28,10 +30,16 @@ public class CityActivity extends Activity{
 
         // Obtain a reference to the product catalog
         mProductList = new ArrayList<Product>();
-        for(Product entry:ShoppingCartHelper.getCity(getResources()).keySet()){
-            if(!mProductList.contains(entry))
+        for(Product entry:ShoppingCartHelper.getCity(getResources()).keySet()) {
+            if (!mProductList.contains(entry))
                 mProductList.add(entry);
         }
+        Collections.sort(mProductList, new Comparator<Product>() {
+            @Override
+            public int compare(Product o1, Product o2) {
+                return o1.title.compareToIgnoreCase(o2.title);
+            }
+        });
         // Create the list
         ListView listViewCatalog = (ListView) findViewById(R.id.ListCatalog);
         listViewCatalog.setAdapter(new ProductAdapter(mProductList, getLayoutInflater(), false));
@@ -42,7 +50,7 @@ public class CityActivity extends Activity{
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
                 Intent productDetailsIntent = new Intent(getBaseContext(),CatalogActivity.class);
-                productDetailsIntent.putExtra(ShoppingCartHelper.PRODUCT_INDEX, position);
+                productDetailsIntent.putExtra(ShoppingCartHelper.PRODUCT_INDEX, mProductList.get(position).getTitle());
                 startActivity(productDetailsIntent);
             }
         });

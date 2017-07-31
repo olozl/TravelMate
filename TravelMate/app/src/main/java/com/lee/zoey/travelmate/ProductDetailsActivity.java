@@ -4,6 +4,7 @@ package com.lee.zoey.travelmate;
  * Created by user1 on 2017-07-11.
  */
 
+import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
@@ -24,13 +25,15 @@ public class ProductDetailsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.productdetails);
 
-        List<Product> catalog = ShoppingCartSubItems.getCatalog(getResources());
-        //List<Product> catalog = ShoppingCartHelper.getCatalog(getResources()).values();
-// need update for product details before and after adding into the cart
+        String productIndex = getIntent().getExtras().getString(
+                ShoppingCartHelper.PRODUCT_INDEX);
+        Product selected = ShoppingCartHelper.getCity(getResources()).get("");
 
-        int productIndex = getIntent().getExtras().getInt(
-                ShoppingCartSubItems.PRODUCT_INDEX);
-        final Product selectedProduct = catalog.get(productIndex);
+        for(Product entry : ShoppingCartHelper.getCity(getResources()).values()){
+            if(entry.getTitle().equals(productIndex))
+                selected = entry;
+        }
+        final Product selectedProduct = selected;
 
         // Set the proper image and text
         ImageView productImageView = (ImageView) findViewById(R.id.ImageViewProduct);

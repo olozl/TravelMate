@@ -23,13 +23,8 @@ public class CatalogActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.catalogdetails);
 
-        int productIndex = getIntent().getExtras().getInt(
-                ShoppingCartSubItems.PRODUCT_INDEX);
-        String title = "";
-        if(productIndex==0) title = "Portland";
-        else if(productIndex==1) title = "New York";
-        else if(productIndex==2) title = "LasVegas";
-        else if(productIndex==3) title = "Chicago";
+        String title = getIntent().getExtras().getString(
+                ShoppingCartHelper.PRODUCT_INDEX);
 
         // Obtain a reference to the product catalog
         mProductList = new ArrayList<Product>();
@@ -50,7 +45,7 @@ public class CatalogActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
                 Intent productDetailsIntent = new Intent(getBaseContext(), ProductDetailsActivity.class);
-                productDetailsIntent.putExtra(ShoppingCartSubItems.PRODUCT_INDEX, position);
+                productDetailsIntent.putExtra(ShoppingCartHelper.PRODUCT_INDEX, mProductList.get(position).getTitle());
                 startActivity(productDetailsIntent);
             }
         });

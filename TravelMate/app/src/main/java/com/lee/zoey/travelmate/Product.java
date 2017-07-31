@@ -34,4 +34,8 @@ public class Product {
         return false;
     }
 
+    public String getTitle(){
+        return title;
+    }
+
 }
