@@ -8,6 +8,9 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -24,8 +27,11 @@ public class CityActivity extends Activity{
         setContentView(R.layout.catalog);
 
         // Obtain a reference to the product catalog
-        mProductList = ShoppingCartHelper.getCity(getResources());
-
+        mProductList = new ArrayList<Product>();
+        for(Product entry:ShoppingCartHelper.getCity(getResources()).keySet()){
+            if(!mProductList.contains(entry))
+                mProductList.add(entry);
+        }
         // Create the list
         ListView listViewCatalog = (ListView) findViewById(R.id.ListCatalog);
         listViewCatalog.setAdapter(new ProductAdapter(mProductList, getLayoutInflater(), false));

@@ -1,6 +1,8 @@
 package com.lee.zoey.travelmate;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -21,8 +23,22 @@ public class CatalogActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.catalogdetails);
 
+        int productIndex = getIntent().getExtras().getInt(
+                ShoppingCartSubItems.PRODUCT_INDEX);
+        String title = "";
+        if(productIndex==0) title = "Portland";
+        else if(productIndex==1) title = "New York";
+        else if(productIndex==2) title = "LasVegas";
+        else if(productIndex==3) title = "Chicago";
+
         // Obtain a reference to the product catalog
-        mProductList = ShoppingCartSubItems.getCatalog(getResources());
+        mProductList = new ArrayList<Product>();
+        for(Product val:ShoppingCartHelper.getCity(getResources()).keySet()) {
+            if (val.title.equals(title)) {
+                    mProductList.add(ShoppingCartHelper.getCity(getResources()).get(val));
+            }
+        }
+
 
         // Create the list
         ListView listViewCatalog = (ListView) findViewById(R.id.ListViewCatalog);

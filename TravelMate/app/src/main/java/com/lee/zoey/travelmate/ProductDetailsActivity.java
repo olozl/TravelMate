@@ -25,6 +25,8 @@ public class ProductDetailsActivity extends Activity {
         setContentView(R.layout.productdetails);
 
         List<Product> catalog = ShoppingCartSubItems.getCatalog(getResources());
+        //List<Product> catalog = ShoppingCartHelper.getCatalog(getResources()).values();
+// need update for product details before and after adding into the cart
 
         int productIndex = getIntent().getExtras().getInt(
                 ShoppingCartSubItems.PRODUCT_INDEX);

@@ -16,12 +16,22 @@ public class Product {
     public double price;
     public boolean selected;
 
+    public Product(String title, Drawable productImage) {
+        this.title = title;
+        this.productImage = productImage;
+    }
+
     public Product(String title, Drawable productImage, String description,
                    double price) {
         this.title = title;
         this.productImage = productImage;
         this.description = description;
         this.price = price;
+    }
+
+    public boolean equals(Object o){
+        if(this.title.equals(((Product)o).title)) return true;
+        return false;
     }
 
 }

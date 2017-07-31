@@ -14,20 +14,39 @@ import android.content.res.Resources;
 
 public class ShoppingCartHelper {
     public static final String PRODUCT_INDEX = "PRODUCT_INDEX";
-    private static List<Product> catalog;
+    private static Map<Product, Product> catalog;
     private static Map<Product, ShoppingCartEntry> cartMap = new HashMap<Product, ShoppingCartEntry>();
 
 
-    public static List<Product> getCity(Resources res){
+    public static Map<Product, Product> getCity(Resources res){
         if(catalog == null) {
-            catalog = new Vector<Product>();
-            catalog.add(new Product("Portland", res.getDrawable(R.drawable.ic_action_name), "", 0));
-            catalog.add(new Product("New York", res.getDrawable(R.drawable.ic_action_name), "", 0));
-            catalog.add(new Product("LasVegas", res.getDrawable(R.drawable.ic_action_name), "", 0));
-        }
+            catalog = new HashMap<Product, Product>();
+            catalog.put(new Product("Portland", res.getDrawable(R.drawable.ic_action_name)),
+                    new Product("Bike Tour", res.getDrawable(R.drawable.ic_action_name),
+                            "PSU tour (1hr) + Downtown Tour (3hrs) ", 30.00));
+            catalog.put(new Product("Portland", res.getDrawable(R.drawable.ic_action_name)),
+                    new Product("Mt. Hood Tour", res.getDrawable(R.drawable.ic_action_name),
+                            "PSU tour (1hr) + Downtown Tour (3hrs) ", 30.00));
+            catalog.put(new Product("Portland", res.getDrawable(R.drawable.ic_action_name)),
+                    new Product("PSU Tour", res.getDrawable(R.drawable.ic_action_name),
+                            "2hrs", 10.00));
 
+            catalog.put(new Product("New York", res.getDrawable(R.drawable.ic_action_name)),
+                    new Product("Times Square Tour", res.getDrawable(R.drawable.ic_action_name),
+                            "One day bus trip (8hrs)", 45.00));
+            catalog.put(new Product("New York", res.getDrawable(R.drawable.ic_action_name)),
+                    new Product("Helicopter Tour", res.getDrawable(R.drawable.ic_action_name),
+                            "Downtown (1hr)", 200.00));
+            catalog.put(new Product("LasVegas", res.getDrawable(R.drawable.ic_action_name)),
+                    new Product("Helicopter Tour", res.getDrawable(R.drawable.ic_action_name),
+                            "Helicopter Flight at Night over the Las Vegas Strip (30min)", 100.00));
+            catalog.put(new Product("Chicago", res.getDrawable(R.drawable.ic_action_name)),
+                    new Product("Grant Park Tour", res.getDrawable(R.drawable.ic_action_name),
+                            "Grant Park is Chicago's front yard. (2hrs)", 70.00));
+        }
         return catalog;
     }
+
     public static void setQuantity(Product product, int quantity) {
         // Get the current cart entry
         ShoppingCartEntry curEntry = cartMap.get(product);
@@ -69,8 +88,6 @@ public class ShoppingCartHelper {
         for(Product p : cartMap.keySet()) {
             cartList.add(p);
         }
-
-
         return cartList;
     }
 
