@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -30,10 +32,14 @@ public class CityActivity extends Activity{
 
         // Obtain a reference to the product catalog
         mProductList = new ArrayList<Product>();
+        ArrayAdapter<Product> adapter;
+        Spinner TextView01 = (Spinner) findViewById(R.id.CityList);
         for(Product entry:ShoppingCartHelper.getCity(getResources()).keySet()) {
             if (!mProductList.contains(entry))
                 mProductList.add(entry);
         }
+        adapter = new ArrayAdapter<Product>(this, android.R.layout.simple_spinner_item, mProductList);
+        TextView01.setAdapter(adapter);
         Collections.sort(mProductList, new Comparator<Product>() {
             @Override
             public int compare(Product o1, Product o2) {
@@ -54,6 +60,18 @@ public class CityActivity extends Activity{
                 startActivity(productDetailsIntent);
             }
         });
+
+        ////////////////////////
+        Button addPlan = (Button) findViewById(R.id.ButtonAddCity);
+        addPlan.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent addPlanIntent = new Intent(getBaseContext(), WritingFormActivity.class);
+                startActivity(addPlanIntent);
+            }
+        });
+        ///////////////////////
 
         Button viewShoppingCart = (Button) findViewById(R.id.ButtonViewCart);
         viewShoppingCart.setOnClickListener(new View.OnClickListener() {

@@ -2,15 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="fill_parent"
     android:layout_height="fill_parent" android:background="#ffffff">
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <TextView
-        android:id="@+id/TextView01"
+        android:id="@+id/TextViewda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dip"
-        android:text="Sub-Product Catalog"
-        android:textColor="#000000"
+        android:text="Tour Plans in " android:layout_alignParentLeft="true"
+        android:textColor="#000000" android:gravity="center"
         android:textSize="24dip"></TextView>
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_margin="5dip"
+        android:layout_alignParentRight="true" android:id="@+id/ButtonAddPlan"
+        android:text="Add New Plan"></Button></RelativeLayout>
 
     <ListView
         android:id="@+id/ListViewCatalog"
@@ -20,16 +26,16 @@
         android:background="#ffffff"
         android:cacheColorHint="#ffffff"
         android:clickable="true"></ListView>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     <Button android:layout_width="wrap_content"
          android:layout_height="wrap_content" android:layout_margin="5dip"
-         android:layout_gravity="left" android:id="@+id/ListCatalog"
+         android:layout_alignParentLeft="true" android:id="@+id/ListCatalog"
          android:text="Back to City List"></Button>
     <Button android:layout_width="wrap_content"
          android:layout_height="wrap_content" android:layout_margin="5dip"
-         android:layout_gravity="right" android:id="@+id/ButtonViewCart"
+         android:layout_alignParentRight="true" android:id="@+id/ButtonViewCart"
          android:text="View Shopping Cart"></Button>
-    </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

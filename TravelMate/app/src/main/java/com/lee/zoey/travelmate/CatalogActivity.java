@@ -13,6 +13,9 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class CatalogActivity extends Activity {
     private List<Product> mProductList;
@@ -25,6 +28,8 @@ public class CatalogActivity extends Activity {
 
         String title = getIntent().getExtras().getString(
                 ShoppingCartHelper.PRODUCT_INDEX);
+        TextView TextView01 = (TextView)findViewById(R.id.TextViewda);
+        TextView01.append(title);
 
         // Obtain a reference to the product catalog
         mProductList = new ArrayList<Product>();

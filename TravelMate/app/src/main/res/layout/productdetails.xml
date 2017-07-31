@@ -12,7 +12,7 @@
         <TextView android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/TextViewProductTitle"
             android:layout_gravity="center" android:layout_margin="5dip"
-            android:textSize="26dip" android:text="Dead or Alive"
+            android:textSize="26dip" android:text="Product name"
             android:textColor="#000000"></TextView>
 
     </LinearLayout>
