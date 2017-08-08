@@ -36,6 +36,6 @@ Features to add:
 2. Feedback evaluation to travelmate
 
 ### Contact Me
-Eunji Lee (prefer: Zoey) slaej1228@gmail.com 
+-Eunji Lee (prefer: Zoey) slaej1228@gmail.com 
 
-Sejoong Kim sejoong0711@gmail.com
+-Sejoong Kim sejoong0711@gmail.com
