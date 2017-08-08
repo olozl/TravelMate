@@ -1,7 +1,10 @@
 package com.lee.zoey.travelmate;
 
+
 /**
- * Created by user1 on 2017-07-11.
+ * Copyright (c) 2017 Eunji Lee
+ * This work is available under the "MIT license".
+ * Please see the file COPYING in this distribution for license terms.
  */
 
 import java.util.List;

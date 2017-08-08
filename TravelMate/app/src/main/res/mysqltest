@@ -1,0 +1,9 @@
+<?php
+    echo "MySql Connection Test<br>";
+    $db = mysqli_connect("localhost", "root", "Dldydfkr0-=", "users");
+    if($db){echo "connect : Succeeded!<br>";}
+    else{echo "disconnect : Failed!<br>";}
+    $result = mysqli_query($db, 'SELECT VERSION() as VERSION');
+    $data = mysqli_fetch_assoc($result);
+    echo $data['VERSION'];
+?>

@@ -17,6 +17,13 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+
+/**
+ * Copyright (c) 2017 Eunji Lee
+ * This work is available under the "MIT license".
+ * Please see the file COPYING in this distribution for license terms.
+ */
+
 public class CatalogActivity extends Activity {
     private List<Product> mProductList;
 

@@ -1,5 +1,6 @@
 package com.lee.zoey.travelmate;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,11 +17,14 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 /**
- * Created by user1 on 2017-08-07.
+ * Copyright (c) 2017 Eunji Lee
+ * This work is available under the "MIT license".
+ * Please see the file COPYING in this distribution for license terms.
  */
 
-public class LoginActivity extends AppCompatActivity{
+public class LoginActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -57,7 +61,7 @@ public class LoginActivity extends AppCompatActivity{
                                 String name = jsonResponse.getString("name");
                                 int age = jsonResponse.getInt("age");
 
-                                Intent intent = new Intent(LoginActivity.this, UserAreaActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, ShoppingCartActivity.class);
                                 intent.putExtra("name", name);
                                 intent.putExtra("age", age);
                                 intent.putExtra("username", username);
@@ -76,9 +80,9 @@ public class LoginActivity extends AppCompatActivity{
                     }
                 };
 
-                LoginRequest loginRequest = new LoginRequest(username, password, responseListener);
-                RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
-                queue.add(loginRequest);
+//                LoginRequest loginRequest = new LoginRequest(username, password, responseListener);
+//                RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
+//                queue.add(loginRequest);
             }
         });
     }

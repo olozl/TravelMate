@@ -1,5 +1,6 @@
 package com.lee.zoey.travelmate;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,12 +16,15 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 /**
- * Created by user1 on 2017-08-07.
+ * Copyright (c) 2017 Eunji Lee
+ * This work is available under the "MIT license".
+ * Please see the file COPYING in this distribution for license terms.
  */
 
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -39,7 +43,8 @@ public class RegisterActivity extends AppCompatActivity {
                 final String username = newUsername.getText().toString();
                 final int age = Integer.parseInt(newAge.getText().toString());
                 final String password = newPassword.getText().toString();
-
+                final String lang = newLanguage.getText().toString();
+// without using database?
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -62,9 +67,9 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 };
 
-                RegisterRequest registerRequest = new RegisterRequest(name, username, age, password, responseListener);
-                RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
-                queue.add(registerRequest);
+////                RegisterRequest registerRequest = new RegisterRequest(name, username, age, password, lang, responseListener);
+////                RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
+////                queue.add(registerRequest);
             }
         });
     }
