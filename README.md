@@ -5,12 +5,14 @@ Copyright (c) 2017 Eunji Lee
 This software is licensed under MIT license, please see the file COPYING in this distribution for license information
 
 ### Description 
-An android app to seek for a travel guide
+TravelMate is a travel guide matching app for your reliable and satisfiable trip. Anyone can be a travelmate(guide) and a traveler(user). TravelMate provides a place for people to find their travelmate and/or traveler at any time and place they want to look around. Both travelers and travelmates can offer their availabilities and money trade is made through the app. \n My friend, Sejoong Kim, brought up with this idea from Uber and AirBnB where people share their own properties. I degined up to implement TravelMate like an open-market shopping cart based on Android. 
 
 ### To Build
 TravelMate requires that Android Studio be installed on your device.
 
 ### To Run
+1. Clone Repository
+2. Install Android Studio 2.3.3
 
 ### To Use
 
@@ -18,7 +20,7 @@ TravelMate requires that Android Studio be installed on your device.
 
 
 ### Week 3 Updates
-week 3 - TravelMate will be created on Android and is to find a personal guide who is not professional. My friend, Sejoong Kim, got this idea from Uber and AirBnB where "anyone" can be a driver/homeowner and a user at the same time. TravelMate provides a place for people to find a guide and to find their guests for a satisfying travel/trip. I designed up to implement TravleMate like a open-market shopping cart. So, I am working on implementing it based on shopping cart open-source and will add features for unique features. This is my first time working on Android app, so I've been spending time to get familiar with Android studio.
+week 3 - I am working on implementing it based on shopping cart open-source and will add features for unique features. This is my first time working on Android app, so I've been spending time to get familiar with Android studio.
 Features to add:
 - Create database to keep the list of items and the list of users
 - Allow users to add/delete/edit their own items
@@ -28,7 +30,9 @@ Features to add:
 ### Current Features
 
 ### Future Plans
+1. Money transaction
+2. Feedback evaluation to travelmate
 
 ### Contact Me
-Eunji Lee (prefer: Zoey) slaej1228@gmail.com
+Eunji Lee (prefer: Zoey) slaej1228@gmail.com /n
 Sejoong Kim sejoong0711@gmail.com
