@@ -6,7 +6,6 @@ This software is licensed under MIT license, please see the file COPYING in this
 
 ### Description 
 TravelMate is a travel guide matching app for your reliable and satisfiable trip. Anyone can be a travelmate(guide) and a traveler(user). TravelMate provides a place for people to find their travelmate and/or traveler at any time and place they want to look around. Both travelers and travelmates can offer their availabilities and money trade is made through the app.
-
 My friend, Sejoong Kim, brought up with this idea from Uber and AirBnB where people share their own properties. I degined up to implement TravelMate like an open-market shopping cart based on Android. 
 
 ### To Build
@@ -36,5 +35,6 @@ Features to add:
 2. Feedback evaluation to travelmate
 
 ### Contact Me
-Eunji Lee (prefer: Zoey) slaej1228@gmail.com /n
+Eunji Lee (prefer: Zoey) slaej1228@gmail.com 
+
 Sejoong Kim sejoong0711@gmail.com
