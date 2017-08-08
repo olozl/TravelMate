@@ -35,6 +35,9 @@ Features to add:
 1. Money transaction
 2. Feedback evaluation to travelmate
 
+### References
+- Android Shopping Cart Tutorial : http://www.androiddom.com/2011/02/android-shopping-cart-tutorial.html
+
 ### Contact Me
 - Eunji Lee (prefer: Zoey) slaej1228@gmail.com 
 
