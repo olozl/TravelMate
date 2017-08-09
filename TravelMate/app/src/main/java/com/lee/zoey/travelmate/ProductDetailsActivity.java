@@ -66,8 +66,7 @@ public class ProductDetailsActivity extends Activity {
                 // Check to see that a valid quantity was entered
                 int quantity = 0;
                 try {
-                    quantity = Integer.parseInt(editTextQuantity.getText()
-                            .toString());
+                    quantity = Integer.parseInt(editTextQuantity.getText().toString());
 
                     if (quantity < 0) {
                         Toast.makeText(getBaseContext(),
