@@ -24,7 +24,7 @@ import java.util.List;
 
 public class RegisterActivity extends Activity {
     protected UserInfo user;
-    protected UsersList listusers = new UsersList(); /////// unique username check doesn't work!
+    protected List<UserInfo> listOfUsers = new ArrayList<UserInfo>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,8 +59,8 @@ public class RegisterActivity extends Activity {
                    if(username.isEmpty()){
                        newUsername.setError("Username not entered");
                        newUsername.requestFocus();
-                   } else if(listusers.getSize()>0){
-                       for(UserInfo val:listusers.getList()) {
+                   } else if(listOfUsers.size()>0){
+                       for(UserInfo val:listOfUsers) {
                            if (val.getUser().equals(username)) {
                                newUsername.setError("Existing Username");
                                newUsername.requestFocus();
@@ -104,7 +104,7 @@ public class RegisterActivity extends Activity {
                            // if user inserated valid information, create a Userlist object with those information
                            user = new UserInfo(name, username, age, password, lang, gender);
                            // add the user into the list of users
-                           listusers.setList(user);
+                           listOfUsers.add(user);
                            Toast.makeText(getApplicationContext(), "Success!", Toast.LENGTH_LONG).show();
                     }
                }

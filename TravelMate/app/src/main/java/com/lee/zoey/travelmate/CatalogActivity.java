@@ -58,6 +58,7 @@ public class CatalogActivity extends Activity {
             }
         });
 
+        // Button to go back to City Catagory
         Button viewCityCart = (Button) findViewById(R.id.ListCatalog);
         viewCityCart.setOnClickListener(new View.OnClickListener() {
 
@@ -68,6 +69,7 @@ public class CatalogActivity extends Activity {
             }
         });
 
+        // Button to go to shopping cart
         Button viewShoppingCart = (Button) findViewById(R.id.ButtonViewCart);
         viewShoppingCart.setOnClickListener(new View.OnClickListener() {
 

@@ -35,20 +35,16 @@ public class CityActivity extends Activity{
 
         // Obtain a reference to the product catalog
         mProductList = new ArrayList<Product>();
-//        ArrayAdapter<Product> adapter;
-//        Spinner TextView01 = (Spinner) findViewById(R.id.CityList);
         for(Product entry:ShoppingCartHelper.getCity(getResources()).keySet()) {
             if (!mProductList.contains(entry))
                 mProductList.add(entry);
         }
-//        adapter = new ArrayAdapter<Product>(this, android.R.layout.simple_spinner_item, mProductList);
-//        TextView01.setAdapter(adapter);
-        Collections.sort(mProductList, new Comparator<Product>() {
-            @Override
-            public int compare(Product o1, Product o2) {
-                return o1.title.compareToIgnoreCase(o2.title);
-            }
-        });
+//        Collections.sort(mProductList, new Comparator<Product>() {
+//            @Override
+//            public int compare(Product o1, Product o2) {
+//                return o1.title.compareToIgnoreCase(o2.title);
+//            }
+//        });
         // Create the list
         ListView listViewCatalog = (ListView) findViewById(R.id.ListCatalog);
         listViewCatalog.setAdapter(new ProductAdapter(mProductList, getLayoutInflater(), false));
@@ -76,6 +72,7 @@ public class CityActivity extends Activity{
 //        });
 //        ///////////////////////
 
+        // Button to Shopping Cart
         Button viewShoppingCart = (Button) findViewById(R.id.ButtonViewCart);
         viewShoppingCart.setOnClickListener(new View.OnClickListener() {
 

@@ -21,6 +21,7 @@ public class ShoppingCartHelper {
     private static Map<Product, ShoppingCartEntry> cartMap = new HashMap<Product, ShoppingCartEntry>();
 
 
+    // Mapping travel plans for each city
     public static Map<Product, Product> getCity(Resources res){
         if(catalog == null) {
             catalog = new HashMap<Product, Product>();

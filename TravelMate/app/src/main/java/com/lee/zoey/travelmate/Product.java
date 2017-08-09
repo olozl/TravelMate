@@ -19,11 +19,13 @@ public class Product {
     public double price;
     public boolean selected;
 
+    // Constructor for City catagory
     public Product(String title, Drawable productImage) {
         this.title = title;
         this.productImage = productImage;
     }
 
+    // Constructor for travel plan in a certain city
     public Product(String title, Drawable productImage, String description,
                    double price) {
         this.title = title;

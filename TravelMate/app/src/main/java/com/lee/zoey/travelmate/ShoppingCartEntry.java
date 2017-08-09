@@ -12,11 +12,13 @@ public class ShoppingCartEntry {
     private Product mProduct;
     private int mQuantity;
 
+    // Constructor
     public ShoppingCartEntry(Product product, int quantity) {
         mProduct = product;
         mQuantity = quantity;
     }
 
+    // Getters and Setters
     public Product getProduct() {
         return mProduct;
     }

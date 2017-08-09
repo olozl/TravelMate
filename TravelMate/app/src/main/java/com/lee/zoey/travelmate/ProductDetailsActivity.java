@@ -39,12 +39,12 @@ public class ProductDetailsActivity extends Activity {
         final Product selectedProduct = selected;
 
         // Set the proper image and text
-        ImageView productImageView = (ImageView) findViewById(R.id.ImageViewProduct);
-        productImageView.setImageDrawable(selectedProduct.productImage);
         TextView productTitleTextView = (TextView) findViewById(R.id.TextViewProductTitle);
         productTitleTextView.setText(selectedProduct.title);
         TextView productDetailsTextView = (TextView) findViewById(R.id.TextViewProductDetails);
         productDetailsTextView.setText(selectedProduct.description);
+        ImageView productImageView = (ImageView) findViewById(R.id.ImageViewProduct);
+        productImageView.setImageDrawable(selectedProduct.productImage);
 
         TextView productPriceTextView = (TextView) findViewById(R.id.TextViewProductPrice);
         productPriceTextView.setText("$" + selectedProduct.price);
@@ -57,6 +57,7 @@ public class ProductDetailsActivity extends Activity {
         // Save a reference to the quantity edit text
         final EditText editTextQuantity = (EditText) findViewById(R.id.editTextQuantity);
 
+        // Button to add travel plans into cart
         Button addToCartButton = (Button) findViewById(R.id.ButtonAddToCart);
         addToCartButton.setOnClickListener(new OnClickListener() {
 

@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-        <TextView android:layout_width="wrap_content" android:textSize="30dp"
-            android:layout_height="wrap_content" android:layout_centerHorizontal="true"
-            android:text="Add New Plan" android:id="@+id/WritingForm"></TextView>
-    </RelativeLayout>
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp" android:paddingRight="10dp">
+    <TextView android:id="@+id/tripName"
+        android:text="Title"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <TableRow
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:textSize="22dp"
-            android:text="City" />
-        <Spinner android:id="@+id/CityList"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"></Spinner>
-    </LinearLayout>
-</LinearLayout>
+
+
+        <Spinner android:id="@+id/CityList" android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView android:text="name" />
+
+        <EditText
+            android:id="@+id/PlanName"/>
+
+    </TableRow>
+</TableLayout>
