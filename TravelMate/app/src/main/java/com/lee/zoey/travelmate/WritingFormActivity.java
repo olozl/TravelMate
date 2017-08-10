@@ -9,9 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Copyright (c) 2017 Eunji Lee
  * This work is available under the "MIT license".
@@ -63,8 +60,7 @@ public class WritingFormActivity extends Activity {
                     mProductPrice.setError("Price not entered");
                     mProductPrice.requestFocus();
                 }
-
-  ////////////////////////// got an error here~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                // Update list of plans
                 if(mProductDescrip.getError()==null && mProductPrice.getError()==null
                         && mProductTitle.getError()==null) {
                     Intent viewListIntent = new Intent(getBaseContext(), CityActivity.class);

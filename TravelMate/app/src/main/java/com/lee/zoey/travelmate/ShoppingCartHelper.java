@@ -23,12 +23,9 @@ public class ShoppingCartHelper {
 
     public static void setCity(Resources res, String CityName, String PlanName,
                                                 String PlanDescription, float price){
-        for(Map.Entry<Product,Product> entry : catalog.entrySet()) {
-            if (entry.getKey().equals(CityName)) {
-                entry.setValue(new Product(PlanName, res.getDrawable(R.drawable.ic_action_name),
+        catalog.put(new Product(CityName, res.getDrawable(R.drawable.ic_action_name)),
+                new Product(PlanName, res.getDrawable(R.drawable.ic_action_name),
                         PlanDescription, price));
-            }
-        }
     }
     // Mapping travel plans for each city
     public static Map<Product, Product> getCity(Resources res){
@@ -92,10 +89,12 @@ public class ShoppingCartHelper {
         return 0;
     }
 
+    // remove product from cart
     public static void removeProduct(Product product) {
         cartMap.remove(product);
     }
 
+    // Return current cart list
     public static List<Product> getCartList() {
         List<Product> cartList = new Vector<Product>(cartMap.keySet().size());
         for(Product p : cartMap.keySet()) {
