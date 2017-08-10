@@ -30,7 +30,9 @@ Features to add:
 ### Current Features
 1. Login page 
 2. Registration page - requiring to insert all valid information for each section.
-3. Once login, the list of cities is displayed. A user get to choose which city they want to explore.
+3. Once login, the list of cities is displayed. 
+  3-1. A user get to choose which city they want to explore.
+  3-2. A user click add plan button to add new plan into the list. List of plans is updated.
 4. Once clicking a certain city, the list of tour plans in the city is displayed. A user get to choose which plan they want to try.
 5. Once clicking a certain plan in the city, the detailed description of the plan is displayed.
 6. The user checks description and price of the plan, and then enters number of people in their group.
@@ -44,8 +46,8 @@ Features to add:
 2. Feedback evaluation to travelmate
 3. Add maps to display specific location of trip
 4. Add calendar to choose exact date and time of trip
-5. Add new item into the list and display updated list
-6. Database to store users' information and tour plans
+5. Database to store users' information and tour plans
+6. Add new city 
 
 ### References
 - Android Shopping Cart Tutorial : http://www.androiddom.com/2011/02/android-shopping-cart-tutorial.html
