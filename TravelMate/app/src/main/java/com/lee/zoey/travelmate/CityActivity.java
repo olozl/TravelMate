@@ -39,12 +39,6 @@ public class CityActivity extends Activity{
             if (!mProductList.contains(entry))
                 mProductList.add(entry);
         }
-//        Collections.sort(mProductList, new Comparator<Product>() {
-//            @Override
-//            public int compare(Product o1, Product o2) {
-//                return o1.title.compareToIgnoreCase(o2.title);
-//            }
-//        });
         // Create the list
         ListView listViewCatalog = (ListView) findViewById(R.id.ListCatalog);
         listViewCatalog.setAdapter(new ProductAdapter(mProductList, getLayoutInflater(), false));
@@ -59,18 +53,6 @@ public class CityActivity extends Activity{
                 startActivity(productDetailsIntent);
             }
         });
-
-//        ////////////////////////
-//        Button addPlan = (Button) findViewById(R.id.ButtonAddCity);
-//        addPlan.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View v) {
-//                Intent addPlanIntent = new Intent(getBaseContext(), WritingFormActivity.class);
-//                startActivity(addPlanIntent);
-//            }
-//        });
-//        ///////////////////////
 
         // Button to Shopping Cart
         Button viewShoppingCart = (Button) findViewById(R.id.ButtonViewCart);

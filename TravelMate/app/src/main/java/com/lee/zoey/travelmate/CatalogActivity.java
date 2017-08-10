@@ -58,6 +58,17 @@ public class CatalogActivity extends Activity {
             }
         });
 
+        // Button to add new tour plan
+        Button viewWriteForm = (Button) findViewById(R.id.ButtonAddPlan);
+        viewWriteForm.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent addFormIntent = new Intent(getBaseContext(), WritingFormActivity.class);
+                startActivity(addFormIntent);
+            }
+        });
+
         // Button to go back to City Catagory
         Button viewCityCart = (Button) findViewById(R.id.ListCatalog);
         viewCityCart.setOnClickListener(new View.OnClickListener() {

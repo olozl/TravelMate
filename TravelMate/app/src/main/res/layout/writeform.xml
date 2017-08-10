@@ -1,24 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="10dp" android:paddingRight="10dp">
-    <TextView android:id="@+id/tripName"
-        android:text="Title"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent" android:layout_width="fill_parent"
+    android:background="#ffffff" android:orientation="vertical"
+    android:paddingLeft="10dp" android:paddingTop="10dp"
+    android:paddingRight="10dp">
+<LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content" android:id="@+id/LinearLayoutHeader"
+    android:orientation="horizontal" >
+    <Spinner
+        android:id="@+id/CityList"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+    <EditText android:layout_width="match_parent" android:width="300dp"
+        android:layout_height="wrap_content" android:id="@+id/TextViewProductTitle"
+         android:layout_margin="5dip"
+        android:textSize="26dip" android:hint="Product name" />
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+</LinearLayout>
 
+<EditText
+    android:id="@+id/TextViewProductDetails"
+    android:layout_width="fill_parent" android:gravity="top"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dip"
+    android:layout_weight="1"
+    android:hint="Product description with duration"/>
 
+<LinearLayout android:layout_height="wrap_content"
+    android:layout_width="fill_parent" android:id="@+id/linearLayoutAddLayout"
+    android:orientation="horizontal" android:layout_margin="5dip">
+    <TextView android:id="@+id/textView1" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Price per person: $"
+        android:textColor="#000000"/>
+    <EditText android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_weight="1"
+        android:text="1" android:gravity="right" android:id="@+id/editTextQuantity"
+        android:inputType="number"/>
 
-        <Spinner android:id="@+id/CityList" android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <TextView android:text="name" />
-
-        <EditText
-            android:id="@+id/PlanName"/>
-
-    </TableRow>
-</TableLayout>
+</LinearLayout>
+    <Button android:id="@+id/ButtonUpload" android:background="#666699"
+        android:textColor="#FFFFFF" android:layout_marginBottom="10dp"
+        android:layout_gravity="right" android:layout_height="wrap_content"
+        android:layout_width="fill_parent" android:text="Upload Tour Plan"/>
+</LinearLayout>
