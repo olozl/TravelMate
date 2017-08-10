@@ -31,10 +31,8 @@ Features to add:
 1. Login page 
 2. Registration page - requiring to insert all valid information for each section.
 3. Once login, the list of cities is displayed. 
-
-  3-1. A user get to choose which city they want to explore.
-  
-  3-2. A user click add plan button to add new plan into the list. List of plans is updated.
+- 3-1. A user get to choose which city they want to explore.
+- 3-2. A user click add plan button to add new plan into the list. List of plans is updated.
 4. Once clicking a certain city, the list of tour plans in the city is displayed. A user get to choose which plan they want to try.
 5. Once clicking a certain plan in the city, the detailed description of the plan is displayed.
 6. The user checks description and price of the plan, and then enters number of people in their group.
