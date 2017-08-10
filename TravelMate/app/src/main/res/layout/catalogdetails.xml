@@ -3,9 +3,6 @@
     android:orientation="vertical" android:layout_width="fill_parent"
     android:layout_height="fill_parent" android:background="#ffffff"
     android:paddingLeft="10dp" android:paddingRight="10dp">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
     <TextView
         android:id="@+id/TextViewda"
         android:layout_width="wrap_content"
@@ -14,12 +11,6 @@
         android:text="Tour Plans in " android:layout_alignParentLeft="true"
         android:textColor="#000000" android:gravity="center"
         android:textSize="24dip"/>
-    <Button android:layout_width="wrap_content"
-        android:background="#666699" android:width="40dp"
-        android:textColor="#FFFFFF"
-        android:layout_height="wrap_content" android:layout_margin="5dip"
-        android:layout_alignParentRight="true" android:id="@+id/ButtonAddPlan"
-        android:text="Add New Plan"/></RelativeLayout>
 
     <ListView
         android:id="@+id/ListViewCatalog"

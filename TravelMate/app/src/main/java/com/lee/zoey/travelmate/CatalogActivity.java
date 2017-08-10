@@ -29,8 +29,7 @@ public class CatalogActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.catalogdetails);
 
-        String title = getIntent().getExtras().getString(
-                ShoppingCartHelper.PRODUCT_INDEX);
+        String title = getIntent().getExtras().getString(ShoppingCartHelper.PRODUCT_INDEX);
         TextView TextView01 = (TextView)findViewById(R.id.TextViewda);
         TextView01.append(title);
 
@@ -55,17 +54,6 @@ public class CatalogActivity extends Activity {
                 Intent productDetailsIntent = new Intent(getBaseContext(), ProductDetailsActivity.class);
                 productDetailsIntent.putExtra(ShoppingCartHelper.PRODUCT_INDEX, mProductList.get(position).getTitle());
                 startActivity(productDetailsIntent);
-            }
-        });
-
-        // Button to add new tour plan
-        Button viewWriteForm = (Button) findViewById(R.id.ButtonAddPlan);
-        viewWriteForm.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent addFormIntent = new Intent(getBaseContext(), WritingFormActivity.class);
-                startActivity(addFormIntent);
             }
         });
 

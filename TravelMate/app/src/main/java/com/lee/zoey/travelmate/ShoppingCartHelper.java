@@ -21,6 +21,15 @@ public class ShoppingCartHelper {
     private static Map<Product, ShoppingCartEntry> cartMap = new HashMap<Product, ShoppingCartEntry>();
 
 
+    public static void setCity(Resources res, String CityName, String PlanName,
+                                                String PlanDescription, float price){
+        for(Map.Entry<Product,Product> entry : catalog.entrySet()) {
+            if (entry.getKey().equals(CityName)) {
+                entry.setValue(new Product(PlanName, res.getDrawable(R.drawable.ic_action_name),
+                        PlanDescription, price));
+            }
+        }
+    }
     // Mapping travel plans for each city
     public static Map<Product, Product> getCity(Resources res){
         if(catalog == null) {

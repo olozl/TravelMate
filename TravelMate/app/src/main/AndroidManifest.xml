@@ -17,6 +17,7 @@
         <activity android:name=".RegisterActivity"></activity>
         <activity android:name=".CityActivity"></activity>
         <activity android:name=".CatalogActivity"></activity>
+        <activity android:name=".WritingFormActivity"></activity>
         <activity android:name="ProductDetailsActivity"></activity>
         <activity android:name="ShoppingCartActivity"></activity>
 

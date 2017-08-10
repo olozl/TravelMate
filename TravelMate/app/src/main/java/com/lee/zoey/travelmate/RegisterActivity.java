@@ -29,7 +29,6 @@ public class RegisterActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registerdetails);
-        final Context context = this;
 
         final EditText newName = (EditText) findViewById(R.id.newName);
         final EditText newAge = (EditText) findViewById(R.id.newAge);

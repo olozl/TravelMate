@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">TravelMate</string>
     <string name="hello">Find out your guide/guests!</string>
+    <string-array name="city_array">
+        <item>Portland</item>
+        <item>New York</item>
+        <item>Chicago</item>
+        <item>LasVegas</item>
+    </string-array>
 </resources>

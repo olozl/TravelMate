@@ -9,7 +9,7 @@
     android:orientation="horizontal" >
     <Spinner
         android:id="@+id/CityList"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" android:entries="@array/city_array"
         android:layout_width="wrap_content" />
     <EditText android:layout_width="match_parent" android:width="300dp"
         android:layout_height="wrap_content" android:id="@+id/TextViewProductTitle"
@@ -34,7 +34,7 @@
         android:textColor="#000000"/>
     <EditText android:layout_width="wrap_content"
         android:layout_height="wrap_content" android:layout_weight="1"
-        android:text="1" android:gravity="right" android:id="@+id/editTextQuantity"
+        android:text="1" android:gravity="right" android:id="@+id/editPrice"
         android:inputType="number"/>
 
 </LinearLayout>

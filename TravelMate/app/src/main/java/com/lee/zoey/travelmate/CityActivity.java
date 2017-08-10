@@ -54,6 +54,18 @@ public class CityActivity extends Activity{
             }
         });
 
+
+        // Button to add new tour plan
+        Button viewWriteForm = (Button) findViewById(R.id.ButtonAddPlan);
+        viewWriteForm.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent addFormIntent = new Intent(getBaseContext(), WritingFormActivity.class);
+                startActivity(addFormIntent);
+            }
+        });
+
         // Button to Shopping Cart
         Button viewShoppingCart = (Button) findViewById(R.id.ButtonViewCart);
         viewShoppingCart.setOnClickListener(new View.OnClickListener() {
