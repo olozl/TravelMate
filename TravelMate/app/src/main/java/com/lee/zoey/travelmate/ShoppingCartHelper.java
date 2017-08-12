@@ -22,7 +22,7 @@ public class ShoppingCartHelper {
 
 
     public static void setCity(Resources res, String CityName, String PlanName,
-                                                String PlanDescription, float price){
+                                                String PlanDescription, double price){
         catalog.put(new Product(CityName, res.getDrawable(R.drawable.ic_action_name)),
                 new Product(PlanName, res.getDrawable(R.drawable.ic_action_name),
                         PlanDescription, price));

@@ -26,7 +26,7 @@ public class WritingFormActivity extends Activity {
         final EditText mProductTitle = (EditText) findViewById(R.id.TextViewProductTitle);
         final EditText mProductDescrip = (EditText) findViewById(R.id.TextViewProductDetails);
         final EditText mProductPrice = (EditText) findViewById(R.id.editPrice);
-        final float price = Float.parseFloat(mProductPrice.getText().toString());
+        final double price = Double.parseDouble(mProductPrice.getText().toString());
 
         mCityList.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override

@@ -24,7 +24,7 @@ import java.util.List;
 
 public class RegisterActivity extends Activity {
     protected UserInfo user;
-    protected List<UserInfo> listOfUsers = new ArrayList<UserInfo>();
+    protected UserList listOfUsers = new UserList();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,24 +54,16 @@ public class RegisterActivity extends Activity {
                        newName.requestFocus();
                    }
 
-                   // Give an error message if name is not entered or if name is not unique
+                   // Give an error message if name is not entered
                    if(username.isEmpty()){
                        newUsername.setError("Username not entered");
                        newUsername.requestFocus();
-                   } else if(listOfUsers.size()>0){
-                       for(UserInfo val:listOfUsers) {
-                           if (val.getUser().equals(username)) {
-                               newUsername.setError("Existing Username");
-                               newUsername.requestFocus();
-                           }
-                       }
-//                       for (int i = 0; i < listusers.size(); ++i) {
-//                           Userlist us = (Userlist) listusers.get(i);
-//                           if (us.getUser().equals(username)) {
-//                               newUsername.setError("Existing Username");
-//                               newUsername.requestFocus();
-//                           }
-//                       }
+                   }
+
+                   // Give an error message if name is not unique
+                   if(listOfUsers.idCheck(username)) {
+                       newUsername.setError("Username not unique");
+                       newUsername.requestFocus();
                    }
 
                    // Give an error message if age is not entered or age is not in valid boundary
@@ -103,7 +95,7 @@ public class RegisterActivity extends Activity {
                            // if user inserated valid information, create a Userlist object with those information
                            user = new UserInfo(name, username, age, password, lang, gender);
                            // add the user into the list of users
-                           listOfUsers.add(user);
+                           listOfUsers.addUser(user);
                            Toast.makeText(getApplicationContext(), "Success!", Toast.LENGTH_LONG).show();
                     }
                }

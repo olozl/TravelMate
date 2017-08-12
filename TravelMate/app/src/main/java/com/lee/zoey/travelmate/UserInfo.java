@@ -23,14 +23,8 @@ public class UserInfo {
         this.gender = gender;
     }
 
-    public boolean equals(UserInfo users){
-        if (this.username.equals(users.username) && this.password.equals(users.password))
-            return true;
-        return false;
-    }
-
-    public boolean existing_id(String username){
-        if(this.username.equals(username))
+    public boolean equals(String username, String pwd){
+        if (this.username.equals(username) && this.password.equals(pwd))
             return true;
         return false;
     }

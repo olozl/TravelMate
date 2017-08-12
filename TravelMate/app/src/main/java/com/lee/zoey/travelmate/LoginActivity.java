@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -48,10 +49,15 @@ public class LoginActivity extends Activity {
             public void onClick(View v) {
                 final String username = exUser.getText().toString();
                 final String password = exPwd.getText().toString();
-                // need to check if username and password are matching with userlist
-                Intent startShopping = new Intent(getBaseContext(), CityActivity.class);
-                startActivity(startShopping);
-//                // Response received from the server
+                UserList listOfUsers = new UserList();
+                if(listOfUsers.userCheck(username, password)){
+                    Intent startShopping = new Intent(getBaseContext(), CityActivity.class);
+                    startActivity(startShopping);
+                } else {
+                    Toast.makeText(LoginActivity.this, "Invalid username and/or password",
+                            Toast.LENGTH_SHORT).show();
+                }
+                  // Response received from the server
 //                Response.Listener<String> responseListener = new Response.Listener<String>() {
 //                    @Override
 //                    public void onResponse(String response) {
