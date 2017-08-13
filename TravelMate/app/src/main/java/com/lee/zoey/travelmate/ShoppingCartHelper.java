@@ -21,11 +21,11 @@ public class ShoppingCartHelper {
     private static Map<Product, ShoppingCartEntry> cartMap = new HashMap<Product, ShoppingCartEntry>();
 
 
-    public static void setCity(Resources res, String CityName, String PlanName,
+    public static void setCity(Resources res, String CityName, String PlanName, String writer,
                                                 String PlanDescription, double price){
         catalog.put(new Product(CityName, res.getDrawable(R.drawable.ic_action_name)),
                 new Product(PlanName, res.getDrawable(R.drawable.ic_action_name),
-                        PlanDescription, price));
+                        PlanDescription, price, writer));
     }
     // Mapping travel plans for each city
     public static Map<Product, Product> getCity(Resources res){
@@ -33,26 +33,26 @@ public class ShoppingCartHelper {
             catalog = new HashMap<Product, Product>();
             catalog.put(new Product("Portland", res.getDrawable(R.drawable.ic_action_name)),
                     new Product("Bike Tour", res.getDrawable(R.drawable.ic_action_name),
-                            "PSU tour (1hr) + Downtown Tour (3hrs) ", 30.00));
+                            "Downtown and Water Front by Bike (3hrs) ", 30.00, "slaej1228"));
             catalog.put(new Product("Portland", res.getDrawable(R.drawable.ic_action_name)),
-                    new Product("Mt. Hood Tour", res.getDrawable(R.drawable.ic_action_name),
-                            "PSU tour (1hr) + Downtown Tour (3hrs) ", 30.00));
+                    new Product("OMSI Tour", res.getDrawable(R.drawable.ic_action_name),
+                            "Additional fee for OMSI entrance (2hrs)", 20.00, "zkdls99"));
             catalog.put(new Product("Portland", res.getDrawable(R.drawable.ic_action_name)),
                     new Product("PSU Tour", res.getDrawable(R.drawable.ic_action_name),
-                            "2hrs", 10.00));
+                            "Portland State University Tour (2hrs)", 10.00, "oppaya"));
 
             catalog.put(new Product("New York", res.getDrawable(R.drawable.ic_action_name)),
                     new Product("Times Square Tour", res.getDrawable(R.drawable.ic_action_name),
-                            "One day bus trip (8hrs)", 45.00));
+                            "One day bus trip (8hrs)", 45.00, "jackjack"));
             catalog.put(new Product("New York", res.getDrawable(R.drawable.ic_action_name)),
                     new Product("Helicopter Tour", res.getDrawable(R.drawable.ic_action_name),
-                            "Downtown (1hr)", 200.00));
+                            "Downtown (1hr)", 200.00, "m1277"));
             catalog.put(new Product("LasVegas", res.getDrawable(R.drawable.ic_action_name)),
                     new Product("Helicopter Tour", res.getDrawable(R.drawable.ic_action_name),
-                            "Helicopter Flight at Night over the Las Vegas Strip (30min)", 100.00));
+                            "Helicopter Flight at Night over the Las Vegas Strip (30min)", 100.00, "vegasman"));
             catalog.put(new Product("Chicago", res.getDrawable(R.drawable.ic_action_name)),
                     new Product("Grant Park Tour", res.getDrawable(R.drawable.ic_action_name),
-                            "Grant Park is Chicago's front yard. (2hrs)", 70.00));
+                            "Grant Park is Chicago's front yard. (2hrs)", 70.00, "mymy2787"));
         }
         return catalog;
     }

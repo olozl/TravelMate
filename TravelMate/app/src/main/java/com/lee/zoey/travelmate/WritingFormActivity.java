@@ -17,6 +17,7 @@ import android.widget.Spinner;
 
 public class WritingFormActivity extends Activity {
     private String chosenCIty;
+    private double price;
     @Override
     protected  void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -26,7 +27,6 @@ public class WritingFormActivity extends Activity {
         final EditText mProductTitle = (EditText) findViewById(R.id.TextViewProductTitle);
         final EditText mProductDescrip = (EditText) findViewById(R.id.TextViewProductDetails);
         final EditText mProductPrice = (EditText) findViewById(R.id.editPrice);
-        final double price = Double.parseDouble(mProductPrice.getText().toString());
 
         mCityList.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
@@ -59,13 +59,16 @@ public class WritingFormActivity extends Activity {
                 if(mProductPrice.getText().toString().isEmpty()){
                     mProductPrice.setError("Price not entered");
                     mProductPrice.requestFocus();
+                } else {
+                    price = Double.parseDouble(mProductPrice.getText().toString());
                 }
                 // Update list of plans
                 if(mProductDescrip.getError()==null && mProductPrice.getError()==null
                         && mProductTitle.getError()==null) {
                     Intent viewListIntent = new Intent(getBaseContext(), CityActivity.class);
+                    UserInfo me = new UserInfo(); /////////////////////hmm........... how do i get my username?
                     ShoppingCartHelper.setCity(getResources(), chosenCIty, mProductTitle.getText().toString(),
-                            mProductDescrip.getText().toString(), price);
+                            mProductDescrip.getText().toString(), price, me.getUser());
                     startActivity(viewListIntent);
                 }
             }

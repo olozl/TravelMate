@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by user1 on 2017-08-11.
+ * Copyright (c) 2017 Eunji Lee
+ * This work is available under the "MIT license".
+ * Please see the file COPYING in this distribution for license terms.
  */
 
+// Data structure to store list of users
 public class UserList {
     public static List<UserInfo> listOfUsers;
     public void addUser(UserInfo newUser){
@@ -17,6 +20,7 @@ public class UserList {
             listOfUsers.add(newUser);
         }
     }
+    // id check to avoid same id different users
     public boolean idCheck(String newUser) {
         if (listOfUsers == null) return false;
         for (UserInfo ele : listOfUsers) {
@@ -26,6 +30,7 @@ public class UserList {
         }
         return false;
     }
+    // to check if username and corresponding password are on the user list
     public boolean userCheck(String usernmae, String pwd){
         if(listOfUsers==null) return false;
         for(UserInfo ele : listOfUsers){
@@ -34,6 +39,7 @@ public class UserList {
         }
         return false;
     }
+    // getter
     public List<UserInfo> getList(){
         return listOfUsers;
     }

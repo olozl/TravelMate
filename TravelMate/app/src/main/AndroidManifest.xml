@@ -20,6 +20,7 @@
         <activity android:name=".WritingFormActivity"></activity>
         <activity android:name="ProductDetailsActivity"></activity>
         <activity android:name="ShoppingCartActivity"></activity>
+        <activity android:name=".CheckoutActivity"></activity>
 
     </application>
 </manifest>

@@ -18,9 +18,9 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Toast;
 
 public class ShoppingCartActivity extends Activity {
-
     private List<Product> mCartList;
     private ProductAdapter mProductAdapter;
 
@@ -55,6 +55,7 @@ public class ShoppingCartActivity extends Activity {
             }
         });
 
+        // Button to go back to city list to add more items
         Button viewCityCart = (Button) findViewById(R.id.ListCatalog);
         viewCityCart.setOnClickListener(new View.OnClickListener() {
 
@@ -64,7 +65,17 @@ public class ShoppingCartActivity extends Activity {
                 startActivity(viewShoppingCartIntent);
             }
         });
-
+        // Button to check out items in cart
+        Button checkout = (Button) findViewById(R.id.checkout);
+        checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ShoppingCartActivity.this, "Successfully checked out!",
+                        Toast.LENGTH_SHORT).show();
+                Intent checkoutIntent = new Intent(getBaseContext(), CheckoutActivity.class);
+                startActivity(checkoutIntent);
+            }
+        });
     }
 
     @Override
@@ -79,7 +90,8 @@ public class ShoppingCartActivity extends Activity {
         double subTotal = 0;
         for(Product p : mCartList) {
             int quantity = ShoppingCartHelper.getProductQuantity(p);
-            subTotal += p.price * quantity;
+            double discount = p.price - (p.price * (0.1 * (quantity-1)));
+            subTotal += (discount)*quantity;
         }
 
         TextView productPriceTextView = (TextView) findViewById(R.id.TextViewSubtotal);

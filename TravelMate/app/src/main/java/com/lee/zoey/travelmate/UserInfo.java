@@ -22,13 +22,13 @@ public class UserInfo {
         this.password = password;
         this.gender = gender;
     }
-
+    // to check if username and corresponding password are equal
     public boolean equals(String username, String pwd){
         if (this.username.equals(username) && this.password.equals(pwd))
             return true;
         return false;
     }
-
+    // getter
     public String getUser(){
         return this.username;
     }

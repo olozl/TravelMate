@@ -18,6 +18,7 @@ public class Product {
     public String description;
     public double price;
     public boolean selected;
+    public String writer;
 
     // Constructor for City catagory
     public Product(String title, Drawable productImage) {
@@ -27,11 +28,12 @@ public class Product {
 
     // Constructor for travel plan in a certain city
     public Product(String title, Drawable productImage, String description,
-                   double price) {
+                   double price, String writer) {
         this.title = title;
         this.productImage = productImage;
         this.description = description;
         this.price = price;
+        this.writer = writer;
     }
 
     public boolean equals(Object o){

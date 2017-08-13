@@ -45,6 +45,8 @@ public class ProductDetailsActivity extends Activity {
         productDetailsTextView.setText(selectedProduct.description);
         ImageView productImageView = (ImageView) findViewById(R.id.ImageViewProduct);
         productImageView.setImageDrawable(selectedProduct.productImage);
+        TextView writerName = (TextView) findViewById(R.id.matename);
+        writerName.setText(selectedProduct.writer);
 
         TextView productPriceTextView = (TextView) findViewById(R.id.TextViewProductPrice);
         productPriceTextView.setText("$" + selectedProduct.price);

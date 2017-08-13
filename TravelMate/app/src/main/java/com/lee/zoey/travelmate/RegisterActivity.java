@@ -111,37 +111,3 @@ public class RegisterActivity extends Activity {
         });
     }
 }
-
-
-
-//                Response.Listener<String> responseListener = new Response.Listener<String>() {
-//                    @Override
-//                    public void onResponse(String response) {
-//                        try {
-//                            JSONObject jsonResponse = new JSONObject(response);
-//                            boolean success = jsonResponse.getBoolean("success");
-//                            if (success) {
-//                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-//                                RegisterActivity.this.startActivity(intent);
-//                            } else {
-//                                AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
-//                                builder.setMessage("Register Failed")
-//                                        .setNegativeButton("Retry", null)
-//                                        .create()
-//                                        .show();
-//                            }
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//                        }
-//                    }
-//                };
-
-////                RegisterRequest registerRequest = new RegisterRequest(name, username, age, password, lang, responseListener);
-////                RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
-////                queue.add(registerRequest);
-
-    //            };
-      //      }
-       // });
-//    }
-//}
