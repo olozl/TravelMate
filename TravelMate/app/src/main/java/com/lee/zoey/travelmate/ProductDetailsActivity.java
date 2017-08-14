@@ -33,8 +33,10 @@ public class ProductDetailsActivity extends Activity {
         Product selected = ShoppingCartHelper.getCity(getResources()).get("");
 
         for(Product entry : ShoppingCartHelper.getCity(getResources()).values()){
-            if(entry.getTitle().equals(productIndex))
+            if(entry.getTitle().equals(productIndex)) {
                 selected = entry;
+                break;
+            }
         }
         final Product selectedProduct = selected;
 
@@ -47,6 +49,15 @@ public class ProductDetailsActivity extends Activity {
         productImageView.setImageDrawable(selectedProduct.productImage);
         TextView writerName = (TextView) findViewById(R.id.matename);
         writerName.setText(selectedProduct.writer);
+        TextView writerLang = (TextView) findViewById(R.id.matelang);
+        for(UserInfo ele : UserList.getList()){
+            if(ele.getUser().equals(writerName.getText().toString())){
+                writerLang.setText(ele.lang);
+                break;
+            }
+        }
+        if(writerLang.getText().toString().isEmpty())
+            writerLang.setText("English");
 
         TextView productPriceTextView = (TextView) findViewById(R.id.TextViewProductPrice);
         productPriceTextView.setText("$" + selectedProduct.price);
@@ -72,17 +83,14 @@ public class ProductDetailsActivity extends Activity {
                     quantity = Integer.parseInt(editTextQuantity.getText().toString());
 
                     if (quantity < 0) {
-                        Toast.makeText(getBaseContext(),
-                                "Please enter a quantity of 0 or higher",
+                        Toast.makeText(getBaseContext(), "Please enter a quantity of 0 or higher",
                                 Toast.LENGTH_SHORT).show();
                         return;
                     }
 
                 } catch (Exception e) {
-                    Toast.makeText(getBaseContext(),
-                            "Please enter a numeric quantity",
+                    Toast.makeText(getBaseContext(), "Please enter a numeric quantity",
                             Toast.LENGTH_SHORT).show();
-
                     return;
                 }
 

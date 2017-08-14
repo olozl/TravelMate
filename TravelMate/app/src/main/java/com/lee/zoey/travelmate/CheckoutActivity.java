@@ -31,7 +31,6 @@ public class CheckoutActivity extends Activity{
             mCartList.get(i).selected = false;
         }
 
-
         // Create the list
         ListView listViewCatalog = (ListView) findViewById(R.id.ListView);
         mProductAdapter = new ProductAdapter(mCartList, getLayoutInflater(), true);
@@ -42,10 +41,9 @@ public class CheckoutActivity extends Activity{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
-                Intent productDetailsIntent = new Intent(getBaseContext(),ProductDetailsActivity.class);
-/////////// not this but need to open feedback page
-                productDetailsIntent.putExtra(ShoppingCartHelper.PRODUCT_INDEX, mCartList.get(position).getTitle());
-                startActivity(productDetailsIntent);
+                Intent feedbackIntent = new Intent(getBaseContext(),FeedbackActivity.class);
+                feedbackIntent.putExtra(ShoppingCartHelper.PRODUCT_INDEX, mCartList.get(position).getTitle());
+                startActivity(feedbackIntent);
             }
         });
 

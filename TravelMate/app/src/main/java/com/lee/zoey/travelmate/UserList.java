@@ -40,7 +40,7 @@ public class UserList {
         return false;
     }
     // getter
-    public List<UserInfo> getList(){
+    public static List<UserInfo> getList(){
         return listOfUsers;
     }
 }

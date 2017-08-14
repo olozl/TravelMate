@@ -3,6 +3,7 @@ package com.lee.zoey.travelmate;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -66,9 +67,8 @@ public class WritingFormActivity extends Activity {
                 if(mProductDescrip.getError()==null && mProductPrice.getError()==null
                         && mProductTitle.getError()==null) {
                     Intent viewListIntent = new Intent(getBaseContext(), CityActivity.class);
-                    UserInfo me = new UserInfo(); /////////////////////hmm........... how do i get my username?
                     ShoppingCartHelper.setCity(getResources(), chosenCIty, mProductTitle.getText().toString(),
-                            mProductDescrip.getText().toString(), price, me.getUser());
+                            mProductDescrip.getText().toString(), price, LoginActivity.username);
                     startActivity(viewListIntent);
                 }
             }

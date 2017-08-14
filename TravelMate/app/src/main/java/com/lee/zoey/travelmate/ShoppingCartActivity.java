@@ -87,11 +87,16 @@ public class ShoppingCartActivity extends Activity {
             mProductAdapter.notifyDataSetChanged();
         }
 
+        // Discount for groups.
         double subTotal = 0;
         for(Product p : mCartList) {
             int quantity = ShoppingCartHelper.getProductQuantity(p);
-            double discount = p.price - (p.price * (0.1 * (quantity-1)));
-            subTotal += (discount)*quantity;
+            double discount = 0.0;
+            if(quantity <= 4)
+                discount = (p.price * (0.1 * (quantity-1)));
+            else
+                discount = (p.price * (0.1 * 4));
+            subTotal += (p.price - discount)*quantity;
         }
 
         TextView productPriceTextView = (TextView) findViewById(R.id.TextViewSubtotal);

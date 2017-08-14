@@ -26,6 +26,7 @@ import org.json.JSONObject;
  */
 
 public class LoginActivity extends Activity {
+    static public String username;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -48,7 +49,7 @@ public class LoginActivity extends Activity {
         bLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String username = exUser.getText().toString();
+                username = exUser.getText().toString();
                 final String password = exPwd.getText().toString();
                 UserList listOfUsers = new UserList();
                 if(listOfUsers.userCheck(username, password)){

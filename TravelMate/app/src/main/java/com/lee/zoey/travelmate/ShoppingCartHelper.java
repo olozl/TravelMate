@@ -21,8 +21,8 @@ public class ShoppingCartHelper {
     private static Map<Product, ShoppingCartEntry> cartMap = new HashMap<Product, ShoppingCartEntry>();
 
 
-    public static void setCity(Resources res, String CityName, String PlanName, String writer,
-                                                String PlanDescription, double price){
+    public static void setCity(Resources res, String CityName, String PlanName,
+                                                String PlanDescription, double price, String writer){
         catalog.put(new Product(CityName, res.getDrawable(R.drawable.ic_action_name)),
                 new Product(PlanName, res.getDrawable(R.drawable.ic_action_name),
                         PlanDescription, price, writer));
@@ -92,6 +92,11 @@ public class ShoppingCartHelper {
     // remove product from cart
     public static void removeProduct(Product product) {
         cartMap.remove(product);
+    }
+
+    // remove all product from cart
+    public static void removeAll() {
+        cartMap.clear();
     }
 
     // Return current cart list
