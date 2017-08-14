@@ -45,9 +45,8 @@ Features to add:
 ### Future Plans
 1. Money transaction
 2. Add maps to display specific location of trip
-3. Add calendar to choose exact date and time of trip
-4. Database to store users' information and tour plans
-5. Add new city 
+3. Database to store users' information and tour plans
+4. Add new city 
 
 ### References
 - Android Shopping Cart Tutorial : http://www.androiddom.com/2011/02/android-shopping-cart-tutorial.html
