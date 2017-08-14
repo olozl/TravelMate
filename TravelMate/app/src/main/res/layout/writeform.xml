@@ -18,6 +18,7 @@
 
 </LinearLayout>
 
+
 <EditText
     android:id="@+id/TextViewProductDetails"
     android:layout_width="fill_parent" android:gravity="top"
