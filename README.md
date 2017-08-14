@@ -40,17 +40,18 @@ Features to add:
 8. The user can change the number of people in the group after adding the plan into the cart.
 9. The user can go back to city catalog to add more travel plans.
 10. The user can cancel the appointment in cart by re-entering 0 for number of people in the description of the plan.
+11. The user can proceed check out by clicking checkout button and can submit feedback for each trip they had.
 
 ### Future Plans
 1. Money transaction
-2. Feedback evaluation to travelmate
-3. Add maps to display specific location of trip
-4. Add calendar to choose exact date and time of trip
-5. Database to store users' information and tour plans
-6. Add new city 
+2. Add maps to display specific location of trip
+3. Add calendar to choose exact date and time of trip
+4. Database to store users' information and tour plans
+5. Add new city 
 
 ### References
 - Android Shopping Cart Tutorial : http://www.androiddom.com/2011/02/android-shopping-cart-tutorial.html
+- Android Developers : https://developer.android.com/reference/classes.html
 
 ### Contact Me
 - Eunji Lee (prefer: Zoey) slaej1228@gmail.com 
