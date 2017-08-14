@@ -5,7 +5,9 @@ Copyright (c) 2017 Eunji Lee
 This software is licensed under MIT license, please see the file COPYING in this distribution for license information
 
 ### Description 
-TravelMate is an open source private-travel-guide-matching app for your reliable and satisfiable trip with a private guide. Anyone can be a travelmate(guide) and a traveler(user). TravelMate provides a place for people to find their travelmate and/or traveler at any time and place they want to look around. Both travelers and travelmates can offer their availabilities and money trade is made through the app.
+TravelMate is an open source private-travel-guide-matching app for your reliable and satisfiable trip with a private guide. Anyone can be a travelmate(guide) and a traveler(user). Unlike other existing travel programs, in TravelMate, both travelers and travelmates can offer travel schedules and travelmates do not have to be professional. 
+
+This software is for those who are willing to show people around their familiar areas and for those who need some guide for new areas with cheaper price.  
 
 My friend, Sejoong Kim, brought up with this idea from Uber and AirBnB where people share their own properties. I degined up to implement TravelMate like an open-market shopping cart based on Android. 
 
