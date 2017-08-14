@@ -16,8 +16,6 @@ My friend, Sejoong Kim, brought up with this idea from Uber and AirBnB where peo
 4. Build the application and run it using the emulator. (I emulated on Nexus 6 API 25)
 5. Start exploring!
 
-### Example File
-
 
 ### Week 3 Updates
 week 3 - I am working on implementing it based on shopping cart open-source and will add features for unique features. This is my first time working on Android app, so I've been spending time to get familiar with Android studio.
