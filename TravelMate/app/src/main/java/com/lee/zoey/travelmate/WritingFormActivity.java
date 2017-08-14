@@ -1,14 +1,19 @@
 package com.lee.zoey.travelmate;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 
 /**
  * Copyright (c) 2017 Eunji Lee
@@ -28,7 +33,10 @@ public class WritingFormActivity extends Activity {
         final EditText mProductTitle = (EditText) findViewById(R.id.TextViewProductTitle);
         final EditText mProductDescrip = (EditText) findViewById(R.id.TextViewProductDetails);
         final EditText mProductPrice = (EditText) findViewById(R.id.editPrice);
+        final Calendar calendar = Calendar.getInstance();
+        final EditText mProductSchedule = (EditText) findViewById(R.id.scheduleDate);
 
+        // Read chosen city from spinner
         mCityList.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -39,7 +47,28 @@ public class WritingFormActivity extends Activity {
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
+        // Select date for traveling
+        final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener(){
 
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                String format = "MM/dd/yy";
+                SimpleDateFormat simpleFormat = new SimpleDateFormat(format, Locale.US);
+                calendar.set(Calendar.YEAR, year);
+                calendar.set(Calendar.MONTH, month);
+                calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                mProductSchedule.setText(simpleFormat.format(calendar.getTime()));
+            }
+        };
+
+        mProductSchedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog(WritingFormActivity.this, date, calendar.get(Calendar.YEAR),
+                        calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
+
+            }
+        });
         // Button to see updated list of tour plans
         Button viewUpdated = (Button) findViewById(R.id.ButtonUpload);
         viewUpdated.setOnClickListener(new View.OnClickListener() {
